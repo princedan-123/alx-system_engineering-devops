@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-# A bash script that prints a strings using a for loop
+# A bash script that prints a strings using a while loop
 i=1
-for (( i=1; i < 10; i++))
+while (( i < 10 ))
 do
 	if [ $i -eq 9 ]
 	then
 		echo "Hi"
 	fi
 	echo "Best School"
+	(( i++ ))
 done
