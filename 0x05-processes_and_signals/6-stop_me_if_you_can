@@ -1,7 +1,3 @@
 #!/usr/bin/env bash
 # a bash script that terminates another script without strictly using kill
-my_pid=$(pidof 4-to_infinity_and_beyond)
-if [ -n "$my_pid" ]
-then
-	pkill -f 4-to_infinity_and_beyond
-fi
+pkill -f 4-to_infinity_and_beyond
