@@ -3,5 +3,5 @@
 my_pid=$(pidof 4-to_infinity_and_beyond)
 if [ -n "$my_pid" ]
 then
-	pkill 4-to_infinity_and_beyond
+	pkill -f 4-to_infinity_and_beyond
 fi
