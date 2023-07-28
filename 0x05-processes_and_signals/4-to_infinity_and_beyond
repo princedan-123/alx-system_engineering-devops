@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A bash script that executes an indefinite loop
+i=10
+while (( i > 0))
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
