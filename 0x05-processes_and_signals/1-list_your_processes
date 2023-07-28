@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# A bash script that shows the proccess status in a system
+ps -aux
