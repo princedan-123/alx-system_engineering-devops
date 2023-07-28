@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A bash script that displays the proccess status of bash specifically
+# shellcheck disable=SC2009
+ps -aux | grep "bash"
