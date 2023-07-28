@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A script that sends a signal to another process
+pid=$(pidof 4-to_infinity_and_beyond)
+kill $pid
