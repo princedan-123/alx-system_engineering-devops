@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # A script that prints the content of the current directory
-if [ -d $PWD ] && [ -n $PWD ]
+if [ -d "$PWD" ] && [ -n "$PWD" ]
 then
 	for i in  $PWD/*
 	do
-		filename=$(basename $i)
+		filename=$(basename "$i")
 		remove=${filename#*-}
 		echo "$remove"
 	done
