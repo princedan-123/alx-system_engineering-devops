@@ -9,5 +9,6 @@ count=$#;
 
 if ((count == 4))
 then
-	scp -i "$path_to_key" "$path_to_file" "$username@$server_ip": "/~/"
+	scp -o "StrictHostKeyChecking=no" -i \
+		"$path_to_key" "$path_to_file" "$username@$server_ip":~/
 fi
