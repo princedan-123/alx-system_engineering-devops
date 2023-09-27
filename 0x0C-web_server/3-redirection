@@ -7,5 +7,8 @@ sudo apt-get  install nginx -y
 echo "Hello World!"  | sudo tee /var/www/html/index.html
 sudo cp /etc/nginx/sites-available/default backup_config
 new="location /redirect_me { return 301 https://youtube.com; }"
-sudo sed -i "s|location / {|$new|" /etc/nginx/sites-available/default
+sudo sed -i '/location \/ {/ {
+	N
+        s/location\/{[^}]*}/'"$new"'
+}' /etc/nginx/sites-available/default
 sudo service nginx restart
