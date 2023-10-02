@@ -11,7 +11,7 @@ echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # configuring custom header
 
-custom="\\\n\tlocation / {\n\t\tadd_header X-Served-By \$host\n\t}"
+custom="\\\n\tlocation / {\n\t\tadd_header X-Served-By \$hostname\n\t}"
 sudo sed -i "51i $custom"  /etc/nginx/sites-available/default
 
 # configuring redirection
