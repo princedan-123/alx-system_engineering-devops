@@ -20,3 +20,4 @@ backend daniel_backend
 	server 298456-web-01.52.202.61.49:80 check
 	server 298456-web-02.100.26.241.214 check" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo "ENABLED=1" | sudo tee  /etc/default/haproxy
+sudo service haproxy restart
