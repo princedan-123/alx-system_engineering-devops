@@ -12,7 +12,7 @@ cp /etc/haproxy/haproxy.cfg haproxy_backup
 # configuring haproxy
 echo "
 frontend daniel_frontend
-	bind *:80
+	bind 0:80
 	mode http
 	default_backend daniel_backend
 backend daniel_backend
