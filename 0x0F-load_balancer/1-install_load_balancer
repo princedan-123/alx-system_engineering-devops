@@ -4,10 +4,10 @@
 # installing HAproxy for ubuntu 20.4
 
 sudo apt-get update -y
-sudo apt-get install haproxy=2.0\* -y
+sudo apt-get install haproxy -y
 
 # making a backup copy of config file
-cp /etc/haproxy/haproxy.cfg haproxy_backup
+#cp /etc/haproxy/haproxy.cfg haproxy_backup
 
 # configuring haproxy
 echo "
