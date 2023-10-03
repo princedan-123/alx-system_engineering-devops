@@ -10,12 +10,13 @@ sudo apt-get -y install nginx
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # configuring custom header
+server_name=$(hostname)
 
-custom="\\\n\tlocation / {\n\t\tadd_header X-Served-By \$hostname\n\t}"
+custom="\\\n\tlocation / {\n\t\tadd_header X-Served-By $server_name;\n\t}"
 sudo sed -i "51i $custom"  /etc/nginx/sites-available/default
 
 # configuring redirection
 
-redirect="\\\n\tlocation /redirect_me {\n\t\treturn 301 https://youtube.com\n\t}"
+redirect="\\\n\tlocation /redirect_me {\n\t\treturn 301 https://youtube.com;\n\t}"
 sudo sed -i "55i $redirect"  /etc/nginx/sites-available/default
 sudo service nginx restart
