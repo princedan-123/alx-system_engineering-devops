@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 # ammending the link between symlink and server blocks
-
-# remove old symlink
 sudo rm /etc/nginx/sites-enabled/default
-# create a new soft symlink
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
