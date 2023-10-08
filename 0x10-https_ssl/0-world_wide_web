@@ -5,7 +5,7 @@ domain () {
 	result=$(dig "$fullname" |grep -A1 'ANSWER SECTION:' |tail -n 1 | awk '{ print $0}')
 	record=$(echo "$result" | awk '{print $4}')
 	ip=$(echo "$result" | awk '{print $5}')
-	echo "The subdomain $2 is a $record and points to $ip"
+	echo "The subdomain $2 is a record $record and points to $ip"
 	}
 if (( $# == 1 ))
 then
@@ -15,7 +15,7 @@ then
 		result=$(dig "$sub.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk '{print $0}')
 		record=$(echo "$result" | awk '{print $4}')
 		ip=$(echo "$result" | awk '{print $5}')
-		echo "The subdomain $sub is a $record and points to $ip"
+		echo "The subdomain $sub is a record $record and points to $ip"
 	done
 elif (( $# == 2 ))
 then
