@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# prints information about the DNS record of a domain
+
+domain () {
+	if (( $# == 2 ))
+	then
+		result=$(dig $2 |grep -A1 'ANSWER SECTION:' |tail -n 1 | awk '{ print $0}')
+		echo "The subdomain $2 is a $(echo $result | awk '{print $4}') and points to\
+			$(echo $result | awk '{print $5}')"
+	fi
+	}
+if (( $# == 1 ))
+then
+	subdomains=("www" "lb-01" "web-01" "web-02")
+	for sub in ${subdomains[@]}
+	do
+		result=$(dig "$sub.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk '{print $0}')
+		echo "The subdomain $sub is a $(echo $result | awk '{print $4}') and points to $(echo $result | awk '{print $5}')"
+	done
+fi
+
+domain $2
