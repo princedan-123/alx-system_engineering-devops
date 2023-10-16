@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# configuring Nginx to run as non superuser
+
+sudo sed -i 's/^user\s[^;]*;/user nginx;/' /etc/nginx/ngix.config
+sudo sed -i '49i \\\n\t listen 8080;\n' /etc/nginx/sites-available/default
+sudo service nginx restart
