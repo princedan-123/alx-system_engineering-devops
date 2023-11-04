@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# a bash script that terminates another script without strictly using kill
+pkill -f 7-highlander

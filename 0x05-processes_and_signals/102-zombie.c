@@ -18,7 +18,6 @@ int infinite_while(void)
 int main(void)
 {
 	int i = 0, pid = 0;
-	int get_pid = 0;
 
 	while (i < 5)
 	{
@@ -29,8 +28,7 @@ int main(void)
 			infinite_while();
 		else if (pid != 0)
 		{
-			get_pid = getpid();
-			printf("Zombie process created, PID%d\n:", get_pid);
+			printf("%d\nZombie process created, PID:", getpid());
 		}
 		i++;
 	}
