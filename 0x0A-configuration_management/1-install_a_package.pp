@@ -5,6 +5,6 @@ package {'flask':
   provider => 'pip3'
 }
 exec {'dependency':
-  command => '/usr/bin/pip install Werkzeug==2.1.0',
+  command => '/usr/bin/pip install Werkzeug==2.1.1',
   require => Package['flask']
 }
