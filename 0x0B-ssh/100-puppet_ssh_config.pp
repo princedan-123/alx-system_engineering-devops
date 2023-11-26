@@ -7,5 +7,5 @@ exec {'configure password authentication':
 }
 
 exec {'configure indentity file':
-  command  => "/usr/bin/sed -i 'i15IdentityFile ~/.ssh/school' /etc/ssh/ssh_config",
+  command  => "/usr/bin/sed -i 'i15# IdentityFile ~/.ssh/school' /etc/ssh/ssh_config",
 }
