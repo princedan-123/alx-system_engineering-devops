@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# A scripts that installs nginx and configures it
+
+# installation of nginx
+apt-get -y update;
+apt-get -y install nginx;
+
+# testing
+echo "Hello World!" >> /var/www/html/index.html;
+
+# handling redirection
+redirect="\\\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com;\n\t}"
+sudo sed -i "53i$redirect" /etc/nginx/sites-available/default
+nginx -s reload
