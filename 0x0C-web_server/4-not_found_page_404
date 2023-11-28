@@ -16,4 +16,5 @@ sudo sed -i "53i$redirect" /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" >> /var/www/html/custom_error.html
 error="\\\terror_page 404 /custom_error.html;"
 sudo sed -i "45i$error" /etc/nginx/sites-available/default
-nginx -s reload
+# restarting nginx 
+sudo service nginx restart
