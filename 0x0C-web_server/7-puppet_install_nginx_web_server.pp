@@ -12,12 +12,12 @@ file {'/var/www/html/index.html':
   content => 'Hello World!',
 }
 # handling redirection
-$redirect="\\\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com;\n\t}"
-exec {'edit_config_file':
-  command => '/usr/bin/sed -i "53i${redirect}" /etc/nginx/sites-available/default',
+exec {'sudo sed -i "53i\	location /redirect_me {\n\t\treturn 301 https://www.youtube.com;\n\t}" /etc/nginx/sites-available/default':
+  provider => shell,
 }
 
 # restarting ngix
 exec {'restart':
-  command => '/usr/sbin/service nginx restart',
+  command  => 'sudo service nginx restart',
+  provider => shell,
 }
