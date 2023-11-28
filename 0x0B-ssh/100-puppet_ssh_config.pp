@@ -2,10 +2,11 @@
 
 
 exec {'configure password authentication':
-  command  => "/usr/bin/sed -i 's/^#\s*PasswordAuthentication\s+no/# PasswordAuthentication yes/' /etc/ssh/ssh_config",
-
+  command  => '/usr/bin/sed -i "s/^#\s*PasswordAuthentication\s+no/# PasswordAuthentication yes/" /etc/ssh/ssh_config',
+  provider => shell,
 }
 
 exec {'configure indentity file':
-  command  => "/usr/bin/sed -i '15i# IdentityFile ~/.ssh/school' /etc/ssh/ssh_config",
+  command  => 'sed -i "15i# IdentityFile ~/.ssh/school" /etc/ssh/ssh_config',
+  provider => shell,
 }
