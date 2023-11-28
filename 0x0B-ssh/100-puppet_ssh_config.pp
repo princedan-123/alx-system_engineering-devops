@@ -7,6 +7,6 @@ exec {'configure password authentication':
 }
 
 exec {'configure indentity file':
-  command  => 'sed -i "15i# IdentityFile ~/.ssh/school" /etc/ssh/ssh_config',
+  command  => 'sed -i "39i#   IdentityFile ~/.ssh/school" /etc/ssh/ssh_config',
   provider => shell,
 }
