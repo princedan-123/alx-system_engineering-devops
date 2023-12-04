@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# A bash script that adds custom header to a server.
+
+server_name=$(hostname)
+header_name="X-Served-By"
+
+if echo "$server_name" | grep -q "web-02"
+then
+	# installation and configuring server 2
+	apt-get -y update;
+	apt-get -y install nginx;
+
+	# testing
+	echo "Hello World!" > /var/www/html/index.html;
+
+	# handling redirection
+	redirect="\\\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com;\n\t}"
+	sudo sed -i "53i$redirect" /etc/nginx/sites-available/default
+
+	# handling 404 error with a custom page
+	echo "Ceci n'est pas une page" >> /var/www/html/custom_error.html
+	error="\\\terror_page 404 /custom_error.html;"
+	sudo sed -i "45i$error" /etc/nginx/sites-available/default
+fi
+
+# adding custom header
+sed -i "48i \\\tadd_header $header_name $server_name;" /etc/nginx/sites-available/default
+sudo service nginx restart
