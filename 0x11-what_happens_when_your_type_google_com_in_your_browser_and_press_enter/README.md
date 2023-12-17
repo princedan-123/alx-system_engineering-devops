@@ -1,4 +1,4 @@
-<h3><center>ALX software engineering project on web stack/web infrastructure </center> </h3>
+<h4><center>ALX software engineering project on web stack/web infrastructure </center> </h4>
 <p>General Requirements</p>
 <ul>
 <li>You can post your blog post on the platform of your choice, LinkedIn or Medium are good ones</li>
