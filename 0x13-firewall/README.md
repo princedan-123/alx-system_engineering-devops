@@ -4,7 +4,7 @@
 <p>The project has a weight of 1 and took place between Dec 18, 2023 6:00 AM and ended before Dec 19, 2023 6:00 AM </p>
 <ul>
  <p>Here are the resource(s) for the tasks: Read or watch the following </p>
-<li><a href="https://en.wikipedia.org/wiki/Firewall_%28computing%29">Search algorithm</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Firewall_%28computing%29">What is a firewall</a></li>
 </ul>
 <p><em><h4>Learning Objectives</h4></em></p>
 <p><h4><em>Copyright - Plagiarism</em></h4></p>
