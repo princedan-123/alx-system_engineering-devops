@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# A script that dumps and compresses a database
+
+# Creating a database dump
+if [[ $# -eq 1 ]]
+then
+	if mysqldump -u root --all-databases -p"$1" > backup.sql
+	then
+		# archive and compress backup
+		name_format=$(date +%d-%m-%Y)
+		name_extension=".tar.gz"
+		name="$name_format$name_extension"
+		 tar -czf "$name" backup.sql
+	fi
+fi
