@@ -5,7 +5,7 @@
 <h5> Resources </h5>
 <p>Read or watch:</p>
 <ul>
-<li><<a href="https://www.digitalocean.com/community/tutorials/how-to-choose-a-redundancy-plan-to-ensure-high-availability#sql-replication">What is a primary-replica cluster</a>/li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-choose-a-redundancy-plan-to-ensure-high-availability#sql-replication">What is a primary-replica cluster</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql">MySQL primary replica setup</a></li>
 <li><a href="https://www.databasejournal.com/ms-sql/developing-a-sql-server-backup-strategy">Build a robust database backup strategy</a></li>
 </ul>
