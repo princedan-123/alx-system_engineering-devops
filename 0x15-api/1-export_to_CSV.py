@@ -19,7 +19,7 @@ if __name__ == "__main__":
             for task in todos:
                 if task.get("userId") == int(user_id):
                     user_task.append(task)
-            with open("USER_ID.csv", "w") as csv_file:
+            with open("USER_ID.csv", "w", newline="") as csv_file:
                 write_obj = csv.writer(csv_file,  quoting=csv.QUOTE_ALL)
                 for task in user_task:
                     row = []
