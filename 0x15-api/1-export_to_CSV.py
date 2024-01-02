@@ -26,6 +26,6 @@ if __name__ == "__main__":
                     row = []
                     row.append(str(user_id))
                     row.append(user_name)
-                    row.append(task.get("completed"))
+                    row.append(str(task.get("completed")))
                     row.append(task.get("title"))
                     write_obj.writerow(row)
