@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """A python script that sends a request to an API endpoint."""
 
+import json
 import urllib.request
 import sys
-import json
 
 if __name__ == "__main__":
     if len(sys.argv) == 2 and sys.argv[1].isdigit():
