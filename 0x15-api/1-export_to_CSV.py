@@ -23,8 +23,8 @@ if __name__ == "__main__":
                 write_obj = csv.writer(csv_file,  quoting=csv.QUOTE_ALL)
                 for task in user_task:
                     row = []
-                    row.append(str(user_id))
-                    row.append(user_name)
+                    row.append(str(user.get("id")))
+                    row.append(str(user.get("username")))
                     row.append(str(task.get("completed")))
                     row.append(task.get("title"))
                     write_obj.writerow(row)
