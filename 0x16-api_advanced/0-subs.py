@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""A script that queries reddit Api to return the number of subscribers."""
+"""A script that queries reddit Api"""
 
 import requests
 
 
 def number_of_subscribers(subreddit):
+    """A function that returns the number of subscribers."""
     url = f'https://www.reddit.com/r/{subreddit}/about.json'
     custom_header = {'User-Agent': 'myreddit_script'}
     response = requests.get(url, allow_redirects=False, headers=custom_header)
