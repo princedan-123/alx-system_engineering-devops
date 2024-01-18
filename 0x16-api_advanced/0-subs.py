@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""A script that queries reddit Api"""
+"""
+A script that uses Reddit's Api to fetch the total
+number of subscribers in a subreddit.
+"""
 
 import requests
 
@@ -13,8 +16,5 @@ def number_of_subscribers(subreddit):
         return 0
     elif response.status_code == 200:
         result = response.json()
-        data = result.get('data')
-        count = data.get('subscribers')
-        if count is None:
-            return 0
-        return count
+        data = result.get('data', {}).get('subscribers', 0)
+        return data
