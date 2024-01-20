@@ -41,15 +41,18 @@ You can use whatever Puppet resource type you want for you fix
 '''
 Example:
 
-root@e514b399d69d:~# curl -sI 127.0.0.1
+<p>root@e514b399d69d:~# curl -sI 127.0.0.1
 HTTP/1.0 500 Internal Server Error
 Date: Fri, 24 Mar 2017 07:32:16 GMT
 Server: Apache/2.4.7 (Ubuntu)
 X-Powered-By: PHP/5.5.9-1ubuntu4.21
 Connection: close
 Content-Type: text/html
+</p>
 '''
 
+<p>
+'''
 root@e514b399d69d:~# puppet apply 0-strace_is_your_friend.pp
 Notice: Compiled catalog for e514b399d69d.ec2.internal in environment production in 0.02 seconds
 Notice: /Stage[main]/Main/Exec[fix-wordpress]/returns: executed successfully
@@ -62,6 +65,8 @@ Server: Apache/2.4.7 (Ubuntu)
 X-Powered-By: PHP/5.5.9-1ubuntu4.21
 Link: <http://127.0.0.1/?rest_route=/>; rel="https://api.w.org/"
 Content-Type: text/html; charset=UTF-8
+'''
+</p>
 
 root@e514b399d69d:~# curl -s 127.0.0.1:80 | grep Holberton
 <title>Holberton &#8211; Just another WordPress site</title>
