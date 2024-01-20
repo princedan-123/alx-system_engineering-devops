@@ -38,6 +38,7 @@ Requirements:
 
 Your 0-strace_is_your_friend.pp file must contain Puppet code
 You can use whatever Puppet resource type you want for you fix
+'''
 Example:
 
 root@e514b399d69d:~# curl -sI 127.0.0.1
@@ -47,6 +48,7 @@ Server: Apache/2.4.7 (Ubuntu)
 X-Powered-By: PHP/5.5.9-1ubuntu4.21
 Connection: close
 Content-Type: text/html
+'''
 
 root@e514b399d69d:~# puppet apply 0-strace_is_your_friend.pp
 Notice: Compiled catalog for e514b399d69d.ec2.internal in environment production in 0.02 seconds
