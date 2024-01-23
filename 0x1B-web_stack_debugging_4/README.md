@@ -15,12 +15,14 @@ This tutorial has a grade weight of 1 and the first deadline for auto review is 
 <li>Your Puppet manifests files must end with the extension .pp</li>
 <li>Files will be checked with Puppet v3.4</li>
 </ul>
-
+<br>
 <h5>Install puppet-lint </h5>
 """
 $ apt-get install -y ruby
 $ gem install puppet-lint -v 2.1.1
 """
+<br>
+<br>
 <ol>
 <li>In this web stack debugging task, we are testing how well our web server setup featuring Nginx is doing under pressure and it turns out it’s not doing well: we are getting a huge amount of failed requests.
 
