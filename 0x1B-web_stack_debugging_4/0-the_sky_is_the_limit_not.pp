@@ -6,6 +6,6 @@ exec {'ulimit':
 }
 
 exec {'restart':
-  command => 'service nginx restart',
-  path    => '/bin/:/usr/bin/:/usr/local/bin/'
+  command => 'nginx restart',
+  path    => '/etc/init.d/'
 }
